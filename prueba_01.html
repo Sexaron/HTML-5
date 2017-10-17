@@ -1,12 +1,14 @@
 <!doctype html>
 <html>
 <head>
-<meta charset="utf-8">
-<link href="imagenes\icono_01.ico" rel="shortcut icon"/>
-<title>Torneo de Padel</title>	
+	<meta charset="utf-8">
+	<link href="imagenes\icono_01.ico" rel="shortcut icon"/>
+	<title>Torneo de Padel</title>	
+	<link rel="stylesheet" href="hojadeestilos_prueba_01.css"/>
+</head>
 
-<style>
-	#principal{
+<style type="text/css">
+		#principal{
 		width: 400px;
 		text-align: center;
 		margin: 30px auto;
@@ -28,80 +30,8 @@
 	
 	#principal:hover{
 		-moz-transform:rotate(5deg);
-		
 	}
-	
-	/*Para que funcione esta fuente debemos pegar archivo de la fuente en la carpeta raiz, si tenemos un servidor, pegar en la carpeta raiz del servidor*/
-	@font-face{
-		font-family:'MiPropiaFuente';
-		src:url('BAUHS93.TTF');
-	}
-	
-	@font-face{
-		font-family:'Fuente_02';
-		src:url('Love Story Rough.TTF');
-	}
-			
-			/*#titulo{
-				font:bold 36px Verdana, Geneva, sans-serif;
-				text-shadow:#0F0 3px 3px 5px;
-				}*/
-				
-	#titulo{
-		font:bold 42px 'MiPropiaFuente';
-		text-shadow:#0F0 4px 4px 5px;
-		color:rgba(0,0,0,0.5);
-	}	
-	
-	#frase_motivacion{
-		width: auto;
-		text-align: center;
-		margin: 40px auto 15px auto;
-		font: bold 34px 'Fuente_02';
-	}
-	
-	
-	#opciones_nav{
-		margin: 5px auto;
-		padding: 5px;
-		width: 1000px;
-		background-color: #5c8c7b;
-	}
-	
-	nav{
-		text-align: center;
-	}
-	
-	nav ul{
-		list-style: none;
-		display: inline-block;
-		overflow: hidden;
-	}
-	
-	nav ul li{
-		float: left;
-		font-family: Arial, sans-serif;
-		font-size: 16px;
-	}
-	
-	nav ul li a{
-		display: block;
-		padding: 10px 100px;
-		color: #fff;
-		text-decoration: underline;
-		border: ridge;
-		background-color: #99afa7;
-	}
-	
-	nav ul li:hover{
-		background: #3ead47;
-	}
-	
 </style>
-
-</head>
-
-
 
 <body bgcolor="#99afa7">
 	<header id="principal">
@@ -117,16 +47,151 @@
 	
 	<nav id="opciones_nav">
 		<ul>
-			<li><a href="#">Calendario</a></li>		
-			<li><a href="#">Resultados</a></li>		
-			<li><a href="#">Clasificación</a></li>	
+			<li><a href="calendario">Calendario</a></li>		
+			<li><a href="resultados">Resultados</a></li>		
+			<li><a href="clasificacion">Clasificación</a></li>	
 		</ul>
 	</nav>
-	
-	<section>
-<!--	para crear una línea divisoria-->
 	<hr align="center" size="2" width="80%"> 
-	</section>	
+	
+	<!--<section>
+<!	para crear una línea divisoria-->
+		<!--
+	
+		<form name="miformulario" id="miformulario" method="get" autocomplete="on">
+			Email: &nbsp;<input type="email" name="email" id="email"><br><br>
+			Buscar: &nbsp;<input type="search" name="buscar" id="buscar"><br><br>
+			Url: &nbsp;<input type="url" name="url" id="url"><br><br>
+			Edad: &nbsp;<input type="number" name="edad" id="edad" min="0" max="120" step="2" placeholder="Indroduzca edad"><br><br>
+			Edad: &nbsp;<input type="range" name="rangoEdad" id="rangoEdad" min="0" max="120" step="2">
+			<input type="submit" value="Enviar">				
+		</form>
+	
+	</section>		
+	<!-<section>
+		<form name="registro_usuario" method="get">
+
+		<table><tr>
+			<td>Usuario:</td><td><input pattern="[A-Za-z]{3}" name="usuario" id="usuario" maxlength="10" required>
+		<tr><td>
+			Email:</td><td><input type="email" name="miemail" id="miemail" required></td></tr>
+		<tr><td>
+			Edad:</td></tr><input type="range" name="miedad" id="miedad" min="0" max="120" value="30"></td></tr>
+		<tr><td>
+			<output id="rango">0 a 30</output>
+		</td></tr>
+	</section>-->
+
+	<section>
+		<table class="normal" summary="Tabla genérica">
+			<thead>
+				<tr>
+					<th>Equipos</th>
+					<th>Set 1</th>
+					<th>Set 2</th>
+					<th>Set 3</th>
+				</tr>
+			</thead>
+				<tr>
+					<th scope="row" class="equipo_01">
+						<input list="equipos"/>
+							<datalist id="equipos">
+								<option value="Juan y Kike"/>
+								<option value="Lidia y Alfonso"/>
+								<option value="Cris y Conra"/>		
+							</datalist>
+					</th>
+					<td>
+						<input list="Set1"/>
+							<datalist id="Set1">
+								<option value="0"/>
+								<option value="1"/>
+								<option value="2"/>		
+								<option value="3"/>	
+								<option value="4"/>	
+								<option value="5"/>	
+								<option value="6"/>	
+								<option value="7"/>	
+							</datalist>
+					</td>
+					<td>
+						<input list="Set2"/>
+							<datalist id="Set2">
+								<option value="0"/>
+								<option value="1"/>
+								<option value="2"/>		
+								<option value="3"/>	
+								<option value="4"/>	
+								<option value="5"/>	
+								<option value="6"/>	
+								<option value="7"/>	
+							</datalist>
+					</td>
+					<td>
+						<input list="Set3"/>
+							<datalist id="Set3">
+								<option value="0"/>
+								<option value="1"/>
+								<option value="2"/>		
+								<option value="3"/>	
+								<option value="4"/>	
+								<option value="5"/>	
+								<option value="6"/>	
+								<option value="7"/>	
+							</datalist>
+					</td>
+				</tr>	
+				<tr>
+					<th scope="row" class="equipo_02">
+						<input list="equipos"/>
+							<datalist id="equipos">
+								<option value="Juan y Kike"/>
+								<option value="Lidia y Alfonso"/>
+								<option value="Cris y Conra"/>		
+							</datalist>
+					</th>
+					<td>
+						<input list="Set1"/>
+							<datalist id="Set1">
+								<option value="0"/>
+								<option value="1"/>
+								<option value="2"/>		
+								<option value="3"/>	
+								<option value="4"/>	
+								<option value="5"/>	
+								<option value="6"/>	
+								<option value="7"/>	
+							</datalist>
+					</td>
+					<td>
+						<input list="Set2"/>
+							<datalist id="Set2">
+								<option value="0"/>
+								<option value="1"/>
+								<option value="2"/>		
+								<option value="3"/>	
+								<option value="4"/>	
+								<option value="5"/>	
+								<option value="6"/>	
+								<option value="7"/>	
+							</datalist>
+					</td>
+					<td>
+						<input list="Set3"/>
+							<datalist id="Set3">
+								<option value="0"/>
+								<option value="1"/>
+								<option value="2"/>		
+								<option value="3"/>	
+								<option value="4"/>	
+								<option value="5"/>	
+								<option value="6"/>	
+								<option value="7"/>	
+							</datalist>
+					</td>
+				</tr>			
+		</table>
+	</section>
 	
 </body>
 </html>

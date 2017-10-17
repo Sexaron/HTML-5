@@ -1,0 +1,86 @@
+<style>
+
+	
+	/*Para que funcione esta fuente debemos pegar archivo de la fuente en la carpeta raiz, si tenemos un servidor, pegar en la carpeta raiz del servidor*/
+	@font-face{
+		font-family:'MiPropiaFuente';
+		src:url('BAUHS93.TTF');
+	}
+	
+	@font-face{
+		font-family:'Fuente_02';
+		src:url('Love Story Rough.TTF');
+	}
+			
+			/*#titulo{
+				font:bold 36px Verdana, Geneva, sans-serif;
+				text-shadow:#0F0 3px 3px 5px;
+				}*/
+				
+	#titulo{
+		font:bold 42px 'MiPropiaFuente';
+		text-shadow:#0F0 4px 4px 5px;
+		color:rgba(0,0,0,0.5);
+	}	
+	
+	#frase_motivacion{
+		width: auto;
+		text-align: center;
+		margin: 40px auto 15px auto;
+		font: bold 34px 'Fuente_02';
+	}
+	
+	
+	#opciones_nav{
+		margin: 5px auto;
+		padding: 5px;
+		width: 1000px;
+		background-color: #5c8c7b;
+	}
+	
+	nav{
+		text-align: center;
+	}
+	
+	nav ul{
+		list-style: none;
+		display: inline-block;
+		overflow: hidden;
+	}
+	
+	nav ul li{
+		float: left;
+		font-family: Arial, sans-serif;
+		font-size: 16px;
+	}
+	
+	nav ul li a{
+		display: block;
+		padding: 10px 100px;
+		color: #fff;
+		text-decoration: underline;
+		border: ridge;
+		background-color: #99afa7;
+	}
+	
+	nav ul li a:hover{
+		background: #3ead47;
+	}
+
+	table{
+		background-color: white;
+		font: 1em Arial, Helvetica, sans-serif;
+		margin: 50px auto;
+		border-collapse: collapse;
+		text-align: center;
+	}
+
+	.normal {
+		width: 250px;
+		border: 1px solid #000;
+	}
+
+	.normal th, .normal td{
+		border: 1px solid #000;
+	}	
+</style>
