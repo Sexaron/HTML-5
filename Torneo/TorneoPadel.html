@@ -4,7 +4,8 @@
 	<meta charset="utf-8">
 	<link href="imagenes\icono_01.ico" rel="shortcut icon"/>
 	<title>Torneo de Pádel</title>	
-	<link rel="stylesheet" href="hojadeestilos_prueba_01.css"/>
+	<link rel="stylesheet" href="hojaDeEstilos.css"/>
+	<link rel="stylesheet" href="estiloTablas.css"/>
 </head>
 
 <style type="text/css">
@@ -53,171 +54,193 @@
 		</ul>
 	</nav>
 	<hr align="center" size="2" width="80%"> 
-	
-	<!--<section>
-<!	para crear una línea divisoria-->
-		<!--
-	
-		<form name="miformulario" id="miformulario" method="get" autocomplete="on">
-			Email: &nbsp;<input type="email" name="email" id="email"><br><br>
-			Buscar: &nbsp;<input type="search" name="buscar" id="buscar"><br><br>
-			Url: &nbsp;<input type="url" name="url" id="url"><br><br>
-			Edad: &nbsp;<input type="number" name="edad" id="edad" min="0" max="120" step="2" placeholder="Indroduzca edad"><br><br>
-			Edad: &nbsp;<input type="range" name="rangoEdad" id="rangoEdad" min="0" max="120" step="2">
-			<input type="submit" value="Enviar">				
-		</form>
-	
-	</section>		
-	<!-<section>
-		<form name="registro_usuario" method="get">
-
-		<table><tr>
-			<td>Usuario:</td><td><input pattern="[A-Za-z]{3}" name="usuario" id="usuario" maxlength="10" required>
-		<tr><td>
-			Email:</td><td><input type="email" name="miemail" id="miemail" required></td></tr>
-		<tr><td>
-			Edad:</td></tr><input type="range" name="miedad" id="miedad" min="0" max="120" value="30"></td></tr>
-		<tr><td>
-			<output id="rango">0 a 30</output>
-		</td></tr>
-	</section>
 
 	<section>
-		<form>
-		<table class="normal" summary="Tabla genérica">
-			<thead>
-				<tr>
-					<th>Equipos</th>
-					<th>Set 1</th>
-					<th>Set 2</th>
-					<th>Set 3</th>
-				</tr>
-			</thead>
-				<tr>
-					<th scope="row" class="equipo_01">
-						<input list="equipos"/>
-							<datalist id="equipos">
-								<option value="Juan y Kike"/>
-								<option value="Lidia y Alfonso"/>
-								<option value="Cris y Conra"/>		
-							</datalist>
-					</th>
-					<td>
-						<input list="Set1"/>
-							<datalist id="Set1">
-								<option value="0"/>
-								<option value="1"/>
-								<option value="2"/>		
-								<option value="3"/>	
-								<option value="4"/>	
-								<option value="5"/>	
-								<option value="6"/>	
-								<option value="7"/>	
-							</datalist>
-					</td>
-					<td>
-						<input list="Set2"/>
-							<datalist id="Set2">
-								<option value="0"/>
-								<option value="1"/>
-								<option value="2"/>		
-								<option value="3"/>	
-								<option value="4"/>	
-								<option value="5"/>	
-								<option value="6"/>	
-								<option value="7"/>	
-							</datalist>
-					</td>
-					<td>
-						<input list="Set3"/>
-							<datalist id="Set3">
-								<option value="0"/>
-								<option value="1"/>
-								<option value="2"/>		
-								<option value="3"/>	
-								<option value="4"/>	
-								<option value="5"/>	
-								<option value="6"/>	
-								<option value="7"/>	
-							</datalist>
-					</td>
-				</tr>	
-				<tr>
-					<th scope="row" class="equipo_02">
-						<input list="equipos"/>
-							<datalist id="equipos">
-								<option value="Juan y Kike"/>
-								<option value="Lidia y Alfonso"/>
-								<option value="Cris y Conra"/>		
-							</datalist>
-					</th>
-					<td>
-						<input list="Set1"/>
-							<datalist id="Set1">
-								<option value="0"/>
-								<option value="1"/>
-								<option value="2"/>		
-								<option value="3"/>	
-								<option value="4"/>	
-								<option value="5"/>	
-								<option value="6"/>	
-								<option value="7"/>	
-							</datalist>
-					</td>
-					<td>
-						<input list="Set2"/>
-							<datalist id="Set2">
-								<option value="0"/>
-								<option value="1"/>
-								<option value="2"/>		
-								<option value="3"/>	
-								<option value="4"/>	
-								<option value="5"/>	
-								<option value="6"/>	
-								<option value="7"/>	
-							</datalist>
-					</td>
-					<td>
-						<input list="Set3"/>
-							<datalist id="Set3">
-								<option value="0"/>
-								<option value="1"/>
-								<option value="2"/>		
-								<option value="3"/>	
-								<option value="4"/>	
-								<option value="5"/>	
-								<option value="6"/>	
-								<option value="7"/>	
-							</datalist>
-					</td>
-				</tr>			
-		</table>
-		</form>
-	</section>-->
-
-	<section>
-		<form method="post">
-			<table border="5" align="center">
-				<tbody>
-					<tr align="center">
-						<td colspan="1">
-							<table border="1">
-								<tbody>
-									<tr>
-										<td align="center">Equipos</td>
-										<td align="center">Set 1</td>
-										<td align="center">Set 2</td>
-										<td align="center">Set 3</td>
-									</tr>
-								</tbody>
-								
-							</table>
-						</td>
-						
-					</tr>
-				</tbody>
-			</table>
-		</form>
+		<div>
+			<form method="post">
+				<table class="tabla_partido" id="partido01" border="6" align="left">
+					<tbody>
+						<tr align="center">
+							<th align="center">Equipo</th>
+							<th align="center">Set 1</th>
+							<th align="center">Set 2</th>
+							<th align="center">Set 3</th>						
+						</tr>
+						<tr>
+							<th scope="row" class="equipo_02"><input list="equipos"/>
+								<datalist id="equipos">
+									<option value="Pupu y Pepe"/>
+									<option value="Pipi y Popo"/>
+									<option value="Papa y Pepe"/>		
+								</datalist>
+							</th>
+							<td><input id="set01A" type="number" max="7" min="0"/></td>
+							<td><input id="set02A" type="number" max="7" min="0"/></td>
+							<td><input id="set03A" type="number" max="7" min="0"/></td>
+						</tr>
+						<tr>
+							<th scope="row" class="equipo_02"><input list="equipos"/>
+								<datalist id="equipos"></datalist>
+							</th>
+							<td><input id="set01B" type="number" max="7" min="0"/></td>
+							<td><input id="set02B" type="number" max="7" min="0"/></td>
+							<td><input id="set03B" type="number" max="7" min="0"/></td>
+						</tr>
+					</tbody>
+				</table>
+			</form>
+		</div>
+		<div>
+			<form method="post">
+				<table class="tabla_partido" id="partido02" border="6" align="left">
+					<tbody>
+						<tr align="center">
+							<th align="center" width="120">Equipo</th>
+							<th align="center" width="50">Set 1</th>
+							<th align="center" width="50">Set 2</th>
+							<th align="center" width="50">Set 3</th>						
+						</tr>
+						<tr>
+							<th scope="row" class="equipo_02"><input list="equipos"/>
+								<datalist id="equipos"></datalist>
+							</th>
+							<td><input id="set01A" type="number" max="7" min="0" /></td>
+							<td><input id="set02A" type="number" max="7" min="0" /></td>
+							<td><input id="set03A" type="number" max="7" min="0" /></td>
+						</tr>
+						<tr>
+							<th scope="row" class="equipo_02"><input list="equipos"/>
+								<datalist id="equipos"></datalist>
+							</th>
+							<td><input id="set01B" type="number" max="7" min="0" /></td>
+							<td><input id="set02B" type="number" max="7" min="0" /></td>
+							<td><input id="set03B" type="number" max="7" min="0" /></td>
+						</tr>
+					</tbody>
+				</table>
+			</form>
+		</div>
+		<div>
+			<form method="post">
+				<table class="tabla_partido" id="partido03" border="6" align="left">
+					<tbody>
+						<tr align="center">
+							<th align="center" width="120">Equipo</th>
+							<th align="center" width="50">Set 1</th>
+							<th align="center" width="50">Set 2</th>
+							<th align="center" width="50">Set 3</th>						
+						</tr>
+						<tr>
+							<th scope="row" class="equipo_02"><input list="equipos"/>
+								<datalist id="equipos"></datalist>
+							</th>
+							<td><input id="set01A" type="number" max="7" min="0" /></td>
+							<td><input id="set02A" type="number" max="7" min="0" /></td>
+							<td><input id="set03A" type="number" max="7" min="0" /></td>
+						</tr>
+						<tr>
+							<th scope="row" class="equipo_02"><input list="equipos"/>
+								<datalist id="equipos"></datalist>
+							</th>
+							<td><input id="set01B" type="number" max="7" min="0" /></td>
+							<td><input id="set02B" type="number" max="7" min="0" /></td>
+							<td><input id="set03B" type="number" max="7" min="0" /></td>
+						</tr>
+					</tbody>
+				</table>
+			</form>
+		</div>
+		<div>
+			<form method="post">
+				<table class="tabla_partido" id="partido04" border="6" align="left">
+					<tbody>
+						<tr align="center">
+							<th align="center" width="120">Equipo</th>
+							<th align="center" width="50">Set 1</th>
+							<th align="center" width="50">Set 2</th>
+							<th align="center" width="50">Set 3</th>						
+						</tr>
+						<tr>
+							<th scope="row" class="equipo_02"><input list="equipos"/>
+								<datalist id="equipos"></datalist>
+							</th>
+							<td><input id="set01A" type="number" max="7" min="0" /></td>
+							<td><input id="set02A" type="number" max="7" min="0" /></td>
+							<td><input id="set03A" type="number" max="7" min="0" /></td>
+						</tr>
+						<tr>
+							<th scope="row" class="equipo_02"><input list="equipos"/>
+								<datalist id="equipos"></datalist>
+							</th>
+							<td><input id="set01B" type="number" max="7" min="0" /></td>
+							<td><input id="set02B" type="number" max="7" min="0" /></td>
+							<td><input id="set03B" type="number" max="7" min="0" /></td>
+						</tr>
+					</tbody>
+				</table>
+			</form>
+		</div>
+		<div>
+			<form method="post">
+				<table class="tabla_partido" id="partido05" border="6" align="left">
+					<tbody>
+						<tr align="center">
+							<th align="center" width="120">Equipo</th>
+							<th align="center" width="50">Set 1</th>
+							<th align="center" width="50">Set 2</th>
+							<th align="center" width="50">Set 3</th>						
+						</tr>
+						<tr>
+							<th scope="row" class="equipo_02"><input list="equipos"/>
+								<datalist id="equipos"></datalist>
+							</th>
+							<td><input id="set01A" type="number" max="7" min="0" /></td>
+							<td><input id="set02A" type="number" max="7" min="0" /></td>
+							<td><input id="set03A" type="number" max="7" min="0" /></td>
+						</tr>
+						<tr>
+							<th scope="row" class="equipo_02"><input list="equipos"/>
+								<datalist id="equipos"></datalist>
+							</th>
+							<td><input id="set01B" type="number" max="7" min="0" /></td>
+							<td><input id="set02B" type="number" max="7" min="0" /></td>
+							<td><input id="set03B" type="number" max="7" min="0" /></td>
+						</tr>
+					</tbody>
+				</table>
+			</form>
+		</div>
+		<div>
+			<form method="post">
+				<table class="tabla_partido" id="partido06" border="6" align="left">
+					<tbody>
+						<tr align="center">
+							<th align="center" width="120">Equipo</th>
+							<th align="center" width="50">Set 1</th>
+							<th align="center" width="50">Set 2</th>
+							<th align="center" width="50">Set 3</th>						
+						</tr>
+						<tr>
+							<th scope="row" class="equipo_02"><input list="equipos"/>
+								<datalist id="equipos"></datalist>
+							</th>
+							<td><input id="set01A" type="number" max="7" min="0" /></td>
+							<td><input id="set02A" type="number" max="7" min="0" /></td>
+							<td><input id="set03A" type="number" max="7" min="0" /></td>
+						</tr>
+						<tr>
+							<th scope="row" class="equipo_02"><input list="equipos"/>
+								<datalist id="equipos"></datalist>
+							</th>
+							<td><input id="set01B" type="number" max="7" min="0" /></td>
+							<td><input id="set02B" type="number" max="7" min="0" /></td>
+							<td><input id="set03B" type="number" max="7" min="0" /></td>
+						</tr>
+					</tbody>
+				</table>
+			</form>
+		</div>
+		
 	</section>
 	
 </body>
