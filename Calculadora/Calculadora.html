@@ -2,35 +2,65 @@
 <html>
 <head>
 	<title>Calculadora</title>
+	<meta charset="utf-8">
 	<link rel="stylesheet" id="hojaDeEstilos" type="text/css" href="D:\HTML 5\Calculadora\hojaDeEstilos.css">
+
+	<script type="text/javascript" src="./calculadoraScript.js"></script>
 </head>
 
-<body bgcolor="00FFFF">
-	<h1>Calculadora. Ejemplo de Javascript</h1>
-Esta calculadora trabaja de una forma un tanto diferente a como es habitual. Supongamos que quieres sumar dos números. para ello entra el primer número, pulsa ENTER, después el segundo número, y por fin el signo de la operación que quieres hacer, en este caso +.</h1>
+
+
+<body bgcolor="#73c6b6">
+	<div><h1>Calculadora. Ejemplo de Javascript</h1>
+Esta calculadora trabaja de una forma un tanto diferente a como es habitual. Supongamos que quieres sumar dos números. para ello entra el primer número, pulsa ENTER, después el segundo número, y por fin el signo de la operación que quieres hacer, en este caso +.</h1></div>
 	<center>
 		<form method="post">
-			<table border="1" align="center">
+			<table border="5" align="center">
 				<tbody>
 					<tr align="center">
 						<td colspan="4">
-							<table border="0">
+							<table border="1">
 								<tbody>
 									<tr>
 										<td align="right">Stack:</td>
-										<td>
-											<input name="stack" value="0"/>
-										</td>
+										<td><input name="stack" value="0"/></td>
 									</tr>
 									<tr>
 										<td align="right">Acc:</td>
-										<td>
-											<input name="display" value="0">
-										</td>
+										<td><input name="display" value="0"></td>
 									</tr>
 								</tbody>
 							</table>
 						</td>
+					</tr>
+					<tr align="center">
+						<td><input type="button" value=" 7 " onclick="addChar(this.form.display, '7')"/></td>
+						<td><input type="button" value=" 8 " onclick="addChar(this.form.display, '8')"/></td>
+						<td><input type="button" value=" 9 " onclick="addChar(this.form.display, '9')"/></td>
+						<td><input type="button" value=" / " onclick="divide(this.form)"/></td>
+					</tr>
+					<tr align="center">
+						<td><input type="button" value=" 4 " onclick="addChar(this.form.display, '4')"/></td>
+						<td><input type="button" value=" 5 " onclick="addChar(this.form.display, '5')"/></td>
+						<td><input type="button" value=" 6 " onclick="addChar(this.form.display, '6')"/></td>
+						<td><input type="button" value=" * " onclick="multiply(this.form)"/></td>
+					</tr>
+					<tr align="center">
+						<td><input type="button" value=" 1 " onclick="addChar(this.form.display, '1')"/></td>
+						<td><input type="button" value=" 2 " onclick="addChar(this.form.display, '2')"/></td>
+						<td><input type="button" value=" 3 " onclick="addChar(this.form.display, '3')"/></td>
+						<td><input type="button" value=" - " onclick="subtract(this.form)"/></td>
+					</tr>
+					<tr align="center">
+						<td><input type="button" value=" 0 " onclick="addChar(this.form.display, '0')"/></td>
+						<td><input type="button" value=" . " onclick="addChar(this.form.display, '.')"/></td>
+						<td><input type="button" value=" +/- " onclick="changeSign(this.form.display)"/></td>
+						<td><input type="button" value=" + " onclick="add(this.form)"/></td>
+					</tr>
+					<tr align="center">
+						<td colspan="2"><input type="button" value=" Enter " name="enter" onclick="pushStack(this.form)"/></td>
+						<td><input type="button" value=" C " onclick="addChar(this.form.display.value = 0)"/></td>
+						<td><input type="button" value=" <- " onclick="deleteChar(this.form.display)"/></td>
 					</tr>
 
 				</tbody>
@@ -38,5 +68,6 @@ Esta calculadora trabaja de una forma un tanto diferente a como es habitual. Sup
 			</table>
 		</form>
 	</center>
+	<hr/>
 </body>
 </html>
