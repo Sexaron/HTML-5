@@ -1,0 +1,14 @@
+body{
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: #FFF8DC;
+}
+
+table{
+	font-size: 13px;
+	font-weight: normal;
+	padding: 8px;
+	background: #b9c9fe;
+	border-top: 4px solid #aabcfe;
+	border-bottom: 1px solid #fff;
+	color: #039;
+}
