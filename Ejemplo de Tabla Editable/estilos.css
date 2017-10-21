@@ -3,7 +3,7 @@ body{
 	background-color: #FFF8DC;
 }
 
-table{
+th{
 	font-size: 13px;
 	font-weight: normal;
 	padding: 8px;
@@ -11,4 +11,44 @@ table{
 	border-top: 4px solid #aabcfe;
 	border-bottom: 1px solid #fff;
 	color: #039;
+}
+
+table{
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 12px;
+	margin: 45px;
+	width: 550px;
+	text-align: center;
+	border-collapse: collapse;
+}
+
+td{
+	padding: 8px;
+	background-color: #e8edff;
+	border-bottom: 1px solid #fff;
+	color: #669;
+	border-top: 1px solid black;
+}
+
+tr:hover td{
+	background: #d0dafd;
+	color: #339;
+}
+
+.editar{
+	color: blue;
+	cursor: pointer;
+}
+
+#contenedorForm{
+	margin-left: 45px;
+	font-size: 12px;
+}
+
+.boton{
+	color: black;
+	padding: 5px;
+	margin: 10PX;
+	background-color: #b9c9fe;
+	font-weight: bold;
 }
