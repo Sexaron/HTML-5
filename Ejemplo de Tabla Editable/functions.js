@@ -28,6 +28,25 @@ function transformarEnEditable(nodo){
 		editando="true";			
 	}
 	else{
-		alert('Solo se puede editgar una línea. Recargue la página para poder editar otra');
+		alert('Solo se puede editar una línea. Recargue la página para poder editar otra');
 	}
+}
+
+
+function capturarEnvio(){
+	var nodoContenedorForm = document.getElementById('ContenedorForm');
+	nodoContenedorForm.innerHTML = 'Pulse Aceptar para guardar los cambios o cancelar para anularlos'+
+	'<form name="formulario" action="http://aprenderaprogramar.com" method="get" onsubmit="capturarEnvio()"	onreset = "anular()">'+
+	'<input type= "hidden" name="alimento" value="+document.querySelector('#alimento').value+">' + 
+	'<input type= "hidden" name="calorias" value="+document.querySelector('#calorias').value+">'+
+	'<input type= "hidden" name="grasas" value="+document.querySelector('#grasas').value+">' +
+	'<input type= "hidden" name="proteina" value="+document.querySelector('#proteina').value+">' +
+	'<input type= "hidden" name="carbohidratos" value="+document.querySelector('#carbohidratos').value+">' +
+	'<input class="boton" type="submit" value="Aceptar"> <input class="boton" type="reset" value="Cancelar">';
+	document.formulario.submit();
+}
+
+
+function anular(){
+	window.location.reload();
 }
